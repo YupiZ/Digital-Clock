@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Roboto:wght@400;500&display=swap');
+/* font-family: 'Kanit', sans-serif;
+ */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My Styles Start Here */
+
+
+body{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: 'Kanit', 'Roboto' , sans-serif;
+	background-image: url('img/sunset-7790625_1920.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	margin: 20px 0px ;
+
+
+
+}
+
+.clock{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	color: #B5179E ;
+	margin: 30px 0px;
+}
+ .clock p{
+	font-size: 4.5em;
+	line-height: 1.5;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+	text-align: center;
+	text-transform: uppercase;
+	animation: Color 3s infinite ease-in-out;
+ }
+ @keyframes Color{
+	0%{
+	  color:#A0D468;
+	}
+
+	20%{
+	  color:#4FC1E9;
+	}
+
+	40%{
+	  color:#FFCE54;
+	}
+
+	60%{
+	  color:#FC6E51;
+	}
+
+	80%{
+	  color:#ED5565;
+	}
+
+	100%{
+	  color:#AC92EC;
+	}
+  }
+
+  .btn {
+    background-image: linear-gradient(to right, #b424f7 0%, #641ba5  51%, #ff2264  100%);
+    margin: 10px;
+    padding: 15px 25px;
+    text-align: center;
+    text-transform: uppercase;
+	font-weight: bold;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #2315ee;
+    border-radius: 10px;
+	border: none;
+	cursor: pointer;
+
+
+}
+
+.btn:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+.clock #date{
+	padding-bottom:15px;
+}
+.player-weather{
+	display: flex;
+	flex-direction: row;
+	align-items:center;
+	justify-content: space-between;
+
+	width: 80%;
+	height:450px;
+
+
+}
+.controls{
+	margin: 0px 20px;
+	width:50%;
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: start;
+
+}
+
+.controls .control-btns{
+	margin: 0px 40px;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.weather-container{
+	bottom: 20%;
+	position: relative;
+	width: 450px;
+	height: 55px;
+	background: #fff;
+	padding: 28px 32px;
+	overflow:hidden;
+	border-radius: 18px;
+	font-family: "Roboto", sans-serif;
+	transition: 0.6sec ease-out;
+}
+
+.search-box{
+	width: 100%;
+	height: min-content;
+	display: flex;
+	align-items: center;
+	justify-content:space-between;
+}
+.search-box input{
+	border: none;
+	width: 80%;
+	font-size: 1.25rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding-left: 32px;
+	outline: none;
+}
+.search-box input::placeholder{
+	font-size: 1.25rem;
+	font-weight: 500;
+	color:#06283D;
+	text-transform: capitalize;
+}
+
+.search-box button{
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	color: #06283D;
+	border: none;
+	background: #dff6ff;
+	border-radius: 50%;
+	font-size: 1.25rem;
+	transition: 0.4sec ease;
+}
+
+.search-box button:hover {
+	color: white;
+	background: #06283D;
+}
+
+.search-box i{
+	position: absolute;
+	color:#06283D;
+	font-size:28px;
+}
+.weather-box{
+	text-align: center ;
+
+}
+.weather-box img{
+	width:60%;
+	margin-top: 30px;
+}
+.weather-box .temperature{
+	position: relative;
+	color: #06283D;
+	font-size:4rem;
+	margin-top: 30px;
+	font-weight: 800;
+	margin-left:  -16px;
+}
+
+.weather-box .temperature span{
+	position: absolute ;
+	margin-left: 4px;
+	font-size: 1.5rem;
+
+}
+
+.weather-box .description{
+	color: #06283D;
+	font-size: 22px;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+.weather-details{
+	width:100%;
+	display: flex;
+	justify-content: space-between;
+	margin-top:30px ;
+
+}
+.weather-details .humidity, .weather-details .wind{
+	display: flex;
+	align-items: center;
+	width:50%;
+	height:100px;
+}
+.weather-details .humidity{
+	padding-left: 20px;
+	justify-content: flex-start;
+}
+.weather-details .wind{
+	padding-left: 20px;
+	justify-content: flex-end;
+}
+.weather-details i{
+	color: #06283D;
+	font-size: 26px;
+	margin-right: 10px;
+	margin-top: 6px;
+}
+
+.weather-details span{
+	color: #06283D;
+	font-size:22px ;
+	font-weight: 500;
+}
+
+.weather-details p {
+	color: #06283D;
+	font-size: 15px;
+	font-weight: 500;
+
+}
+ .not-found{
+	width: 100%;
+	text-align:center;
+	margin-top: 50px;
+	scale:0;
+	opacity:0;
+	display: none;
+ }
+
+.not-found img{
+	width: 70%;
+
+}
+
+.not-found p{
+	color: #06283D;
+	font-size: 22px;
+	font-weight: 500;
+	margin-top: 12px;
+
+}
+
+.weather-box, .weather-details{
+	scale: 0;
+	opacity: 0;
+}
+
+.fadeIn{
+	animation: 0.5s fadeIn forwards;
+	animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+	to{
+		scale:1;
+		opacity: 1;
+	}
+}
+@media (max-width: 1450px){
+
+	body{
+		height:100%;
+	}
+	.player-weather{
+		flex-direction: column;
+		height: fit-content;
+		align-items: center;
+
+	}
+	.controls{
+		justify-content: center;
+		align-items: center;
+	}
+	.controls #player{
+	display: none;
+
+	}
+
+}
